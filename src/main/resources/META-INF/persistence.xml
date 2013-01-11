@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- * Hibernate, Relational Persistence for Idiomatic Java * * Copyright 
+	(c) 2012, Red Hat, Inc. and/or its affiliates or third-party contributors 
+	as * indicated by the @author tags or express copyright attribution * statements 
+	applied by the authors. All third-party contributions are * distributed under 
+	license by Red Hat, Inc. * * This copyrighted material is made available 
+	to anyone wishing to use, modify, * copy, or redistribute it subject to the 
+	terms and conditions of the GNU * Lesser General Public License, as published 
+	by the Free Software Foundation. * * This program is distributed in the hope 
+	that it will be useful, * but WITHOUT ANY WARRANTY; without even the implied 
+	warranty of MERCHANTABILITY * or FITNESS FOR A PARTICULAR PURPOSE. See the 
+	GNU Lesser General Public License * for more details. * * You should have 
+	received a copy of the GNU Lesser General Public License * along with this 
+	distribution; if not, write to: * Free Software Foundation, Inc. * 51 Franklin 
+	Street, Fifth Floor * Boston, MA 02110-1301 USA -->
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://java.sun.com/xml/ns/persistence
+        http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+	<persistence-unit name="kenefa">
+		<!-- <provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider> -->
+		<provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>
+		<!-- <class>c4a.kenefa.api.model.Facility</class> <class>c4a.kenefa.api.model.Country</class> 
+			<class>c4a.kenefa.api.model.TypeFacility</class> <class>c4a.kenefa.api.model.embedded.City</class> -->
+		<properties>
+			<property name="jboss.as.jpa.providerModule" value="org.datanucleus" />
+			<!-- <property name="jboss.as.jpa.adapterModule" value="org.jboss.as.jpa.hibernate:4"/> -->
+			<property name="datanucleus.ConnectionURL" value="mongodb:127.9.115.1:27017/kenefa" />
+			<property name="datanucleus.storeManagerType" value="mongodb" />
+			<property name="datanucleus.autoCreateSchema" value="false" />
+			<property name="datanucleus.ConnectionUserName" value="admin" />
+			<property name="datanucleus.ConnectionPassword" value="csAAZmRd6H6b" />
+		</properties>
+
+	</persistence-unit>
+
+</persistence>
