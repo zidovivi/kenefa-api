@@ -1,8 +1,20 @@
 package c4a.kenefa.api.model.domain.city;
 
-public class CityLight {
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
+import org.jboss.resteasy.annotations.providers.jaxb.json.Mapped;
+
+@XmlRootElement
+@Mapped(attributesAsElements={"id"})
+@XmlAccessorType(XmlAccessType.FIELD)
+public class CityLight {
+	@XmlAttribute
 	private String id;
+	@XmlElement
 	private String name;
 	/**
 	 * @param id

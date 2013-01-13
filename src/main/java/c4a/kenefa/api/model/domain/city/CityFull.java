@@ -1,11 +1,14 @@
 package c4a.kenefa.api.model.domain.city;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import javax.xml.bind.annotation.XmlRootElement;
 
 import c4a.kenefa.api.model.domain.embedded.Statistics;
 import c4a.kenefa.api.model.domain.facility.FacilityLight;
 import c4a.kenefa.api.model.entity.embedded.Coordonates;
-
+@XmlRootElement
 public class CityFull {
 	private String id;
 	private String name;
